@@ -10,6 +10,12 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
 
+    <ul>
+      <li><g-link class="nav__link" to="/blog-html/blog-post-one/">Post One</g-link></li>
+      <li><g-link class="nav__link" to="/blog-html/blog-post-two/">Post Two</g-link></li>
+      <li><g-link class="nav__link" to="/blog-html/blog-post-three/">Post Three</g-link></li>
+    </ul>
+
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
