@@ -11,9 +11,9 @@
     </p>
 
     <ul>
-      <li><g-link class="nav__link" to="/blog-html/blog-post-one/">Post One</g-link></li>
-      <li><g-link class="nav__link" to="/blog-html/blog-post-two/">Post Two</g-link></li>
-      <li><g-link class="nav__link" to="/blog-html/blog-post-three/">Post Three</g-link></li>
+      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-one/">Post One</g-link></li> -->
+      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-two/">Post Two</g-link></li> -->
+      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-three/">Post Three</g-link></li> -->
     </ul>
 
     <p class="home-links">
