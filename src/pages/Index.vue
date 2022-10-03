@@ -11,9 +11,9 @@
     </p>
 
     <ul>
-      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-one/">Post One</g-link></li> -->
-      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-two/">Post Two</g-link></li> -->
-      <!-- <li><g-link class="nav__link" to="/blog-html/blog-post-three/">Post Three</g-link></li> -->
+      <li v-for="post in $page.posts.edges" :key="post.node.id">
+        <g-link class="nav__link" :to="post.node.path">{{post.node.title}}</g-link>
+      </li>
     </ul>
 
     <p class="home-links">
@@ -23,6 +23,19 @@
 
   </Layout>
 </template>
+<page-query>
+  query Posts {
+  	posts: allPost{
+    	edges {
+        node {
+          id
+          title
+          path
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 export default {
