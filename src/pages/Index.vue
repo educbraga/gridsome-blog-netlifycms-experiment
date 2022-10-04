@@ -10,8 +10,16 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
 
+    <h2>Mine</h2>
     <ul>
       <li v-for="post in $page.posts.edges" :key="post.node.id">
+        <g-link class="nav__link" :to="post.node.path">{{post.node.title}}</g-link>
+      </li>
+    </ul>
+    
+    <h2>Reddit</h2>
+    <ul>
+      <li v-for="post in $page.redditPosts.edges" :key="post.node.id">
         <g-link class="nav__link" :to="post.node.path">{{post.node.title}}</g-link>
       </li>
     </ul>
@@ -25,7 +33,16 @@
 </template>
 <page-query>
   query Posts {
-  	posts: allPost{
+  	posts: allPost {
+    	edges {
+        node {
+          id
+          title
+          path
+        }
+      }
+    }
+  	redditPosts: allRedditPost{
     	edges {
         node {
           id
@@ -35,6 +52,7 @@
       }
     }
   }
+  
 </page-query>
 
 <script>
