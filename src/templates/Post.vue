@@ -1,5 +1,7 @@
 <template>
   <BlogLayout>
+    <h1>{{ $page.post.title }}</h1>
+    <img :src="$page.post.featuredImage" alt="main image" class="mainImage">
     <div class="markdown-body" v-html="$page.post.content" />
   </BlogLayout>
 </template>
@@ -9,6 +11,7 @@
     post: post (path: $path) {
       title
       content
+      featuredImage
     }
   }
 </page-query>
@@ -32,6 +35,10 @@
     max-width: 980px;
     margin: 0 auto;
     padding: 45px;
+  }
+
+  .mainImage {
+    width: 500px;
   }
 
   @media (max-width: 767px) {
