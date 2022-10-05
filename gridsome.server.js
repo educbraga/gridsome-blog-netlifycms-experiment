@@ -23,13 +23,21 @@ module.exports = function (api) {
 
     const collection = actions.addCollection('RedditPost')
 
-    api.createPages(({ createPage }) => {
-      createPage({
-        path: '/reddit/:id',
-        component: './src/templates/RedditPost.vue'
-      })
-    })  
-    
+    // api.createPages(({ createPage }) => {
+    //   createPage({
+    //     path: '/reddit/:id',
+    //     component: './src/templates/RedditPost.vue'
+    //   })
+    // })  
+
+    // api.createPages(({ getCollection, createPage }) => {
+    //   getCollection('RedditPost').data().forEach(node => {
+    //     createPage({
+    //       path: `/reddit/${node.id}`,
+    //       component: './src/templates/RedditPost.vue'
+    //     })
+    //   })
+    // })
 
     for (const post of data.data.children) {
       collection.addNode({

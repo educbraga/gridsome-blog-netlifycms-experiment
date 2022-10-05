@@ -20,5 +20,10 @@ module.exports = {
     remark: {
       // global remark options
     }
+  },
+  templates: {
+    RedditPost: [
+      { path: '/reddit/:id', component: './src/templates/RedditPost.vue' }
+    ]
   }
 }
